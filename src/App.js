@@ -14,11 +14,11 @@ function App() {
 
 
   const handleTema = () => {
-   
+    setTemaOscuro(currentTheme => currentTheme = !currentTheme);
   };
 
-  const handleFavorita = () => {
-  
+  const handleFavorita = (newFav) => {
+    setFavorita(currentFav => currentFav = newFav);
   };
 
   return (
