@@ -7,10 +7,12 @@ const listadoPlataformas = ["Twitter", "Facebook", "Youtube"];
 // 2- utilizar el listadoPlataformas para renderizar la cantidad de Items acorde al array 🚩
 // 3- cada item debe tener como propiedades su key, pasar el metodo para elegir como favorita heradado por su padre y presentar el nombre de la plataforma
 
-export default function Tarjeta(props) {
+export default function Tarjeta({ handleFavorita }) {
   return (
     <ul>
-      // 🚩
+      { listadoPlataformas.map((it) =>
+        (<Item key={it} nombre={it} handleFavorita={handleFavorita}/>))
+      }
     </ul>
   );
 }
