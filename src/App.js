@@ -26,7 +26,7 @@ function App() {
       <h1>¡Bienvenidos!</h1>
       <h2>Contanos, ¿cuál es tu plataforma favorita?</h2>
       { favorita !== "" ? (<h4 className={ favorita === "Twitter" ? "tw" : favorita === "Facebook" ? "fb" : "yt" }> {favorita}</h4>) : ("")}
-      <Tarjeta/>
+      <Tarjeta handleFavorita={handleFavorita}/>
 
       <button onClick={() => { handleTema(); }}>Cambiar tema</button>
     </div>
